@@ -19,3 +19,4 @@ true_when_x_is_13219
     ${response}=    GET  ${BASE_URL}/is_prime/13219
     Status Should Be     200
     Should Be Equal  ${response.text}  true
+    

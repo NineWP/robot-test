@@ -1,100 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20240304 19:15:44.431" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20240304 20:05:19.832" rpa="false" schemaversion="4">
 <suite id="s1" name="Test" source="C:\worrapon\KMITL_YEAR_3\SDPX\lab_exam\robot\test.robot">
 <test id="s1-t1" name="true_when_x_is_17" line="8">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>${BASE_URL}/is_prime/17</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20240304 19:15:44.592" level="INFO">GET Request : url=http://localhost:3000/is_prime/17 
+<msg timestamp="20240304 20:05:20.689" level="INFO">GET Request : url=http://localhost:3000/is_prime/17 
  path_url=/is_prime/17 
  headers={'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20240304 19:15:44.593" level="INFO">GET Response : url=http://localhost:3000/is_prime/17 
+<msg timestamp="20240304 20:05:20.689" level="INFO">GET Response : url=http://localhost:3000/is_prime/17 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'ETag': 'W/"4-X/5TO4MPCKAyY0ipFgr6/IraRNs"', 'Date': 'Mon, 04 Mar 2024 12:15:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'ETag': 'W/"4-X/5TO4MPCKAyY0ipFgr6/IraRNs"', 'Date': 'Mon, 04 Mar 2024 13:05:20 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
  body=true 
  </msg>
-<msg timestamp="20240304 19:15:44.593" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20240304 19:15:44.583" endtime="20240304 19:15:44.593"/>
+<msg timestamp="20240304 20:05:20.690" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240304 20:05:20.606" endtime="20240304 20:05:20.690"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20240304 19:15:44.593" endtime="20240304 19:15:44.593"/>
+<status status="PASS" starttime="20240304 20:05:20.691" endtime="20240304 20:05:20.692"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${response.text}</arg>
 <arg>true</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20240304 19:15:44.594" endtime="20240304 19:15:44.594"/>
+<status status="PASS" starttime="20240304 20:05:20.693" endtime="20240304 20:05:20.694"/>
 </kw>
-<status status="PASS" starttime="20240304 19:15:44.583" endtime="20240304 19:15:44.595"/>
+<status status="PASS" starttime="20240304 20:05:20.604" endtime="20240304 20:05:20.694"/>
 </test>
 <test id="s1-t2" name="false_when_x_is_36" line="13">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>${BASE_URL}/is_prime/36</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20240304 19:15:44.599" level="INFO">GET Request : url=http://localhost:3000/is_prime/36 
+<msg timestamp="20240304 20:05:20.710" level="INFO">GET Request : url=http://localhost:3000/is_prime/36 
  path_url=/is_prime/36 
  headers={'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20240304 19:15:44.599" level="INFO">GET Response : url=http://localhost:3000/is_prime/36 
+<msg timestamp="20240304 20:05:20.711" level="INFO">GET Response : url=http://localhost:3000/is_prime/36 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'ETag': 'W/"5-fLbvuYullyqbUJDcLlF/4U0SywQ"', 'Date': 'Mon, 04 Mar 2024 12:15:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'ETag': 'W/"5-fLbvuYullyqbUJDcLlF/4U0SywQ"', 'Date': 'Mon, 04 Mar 2024 13:05:20 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
  body=false 
  </msg>
-<msg timestamp="20240304 19:15:44.600" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20240304 19:15:44.596" endtime="20240304 19:15:44.600"/>
+<msg timestamp="20240304 20:05:20.712" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240304 20:05:20.698" endtime="20240304 20:05:20.712"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20240304 19:15:44.600" endtime="20240304 19:15:44.600"/>
+<status status="PASS" starttime="20240304 20:05:20.715" endtime="20240304 20:05:20.716"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${response.text}</arg>
 <arg>false</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20240304 19:15:44.601" endtime="20240304 19:15:44.601"/>
+<status status="PASS" starttime="20240304 20:05:20.717" endtime="20240304 20:05:20.719"/>
 </kw>
-<status status="PASS" starttime="20240304 19:15:44.595" endtime="20240304 19:15:44.601"/>
+<status status="PASS" starttime="20240304 20:05:20.697" endtime="20240304 20:05:20.720"/>
 </test>
 <test id="s1-t3" name="true_when_x_is_13219" line="18">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>${BASE_URL}/is_prime/13219</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20240304 19:15:44.605" level="INFO">GET Request : url=http://localhost:3000/is_prime/13219 
+<msg timestamp="20240304 20:05:20.738" level="INFO">GET Request : url=http://localhost:3000/is_prime/13219 
  path_url=/is_prime/13219 
  headers={'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20240304 19:15:44.605" level="INFO">GET Response : url=http://localhost:3000/is_prime/13219 
+<msg timestamp="20240304 20:05:20.739" level="INFO">GET Response : url=http://localhost:3000/is_prime/13219 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'ETag': 'W/"4-X/5TO4MPCKAyY0ipFgr6/IraRNs"', 'Date': 'Mon, 04 Mar 2024 12:15:44 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ headers={'X-Powered-By': 'Express', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'ETag': 'W/"4-X/5TO4MPCKAyY0ipFgr6/IraRNs"', 'Date': 'Mon, 04 Mar 2024 13:05:20 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
  body=true 
  </msg>
-<msg timestamp="20240304 19:15:44.605" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20240304 19:15:44.601" endtime="20240304 19:15:44.605"/>
+<msg timestamp="20240304 20:05:20.739" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20240304 20:05:20.726" endtime="20240304 20:05:20.739"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20240304 19:15:44.606" endtime="20240304 19:15:44.606"/>
+<status status="PASS" starttime="20240304 20:05:20.741" endtime="20240304 20:05:20.742"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${response.text}</arg>
 <arg>true</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20240304 19:15:44.606" endtime="20240304 19:15:44.607"/>
+<status status="PASS" starttime="20240304 20:05:20.743" endtime="20240304 20:05:20.745"/>
 </kw>
-<status status="PASS" starttime="20240304 19:15:44.601" endtime="20240304 19:15:44.607"/>
+<status status="PASS" starttime="20240304 20:05:20.723" endtime="20240304 20:05:20.745"/>
 </test>
-<status status="PASS" starttime="20240304 19:15:44.433" endtime="20240304 19:15:44.608"/>
+<status status="PASS" starttime="20240304 20:05:19.837" endtime="20240304 20:05:20.751"/>
 </suite>
 <statistics>
 <total>
